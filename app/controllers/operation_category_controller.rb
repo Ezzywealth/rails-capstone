@@ -1,0 +1,2 @@
+class OperationCategoryController < ApplicationRecord
+end

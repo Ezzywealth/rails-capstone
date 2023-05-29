@@ -1,4 +1,4 @@
-class Group < ApplicationRecord
+class Catgeory < ApplicationRecord
 
   validates :name, presence: true
   validates :icon, presence: true

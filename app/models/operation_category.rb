@@ -1,0 +1,2 @@
+class OperationCategory < ApplicationRecord
+end

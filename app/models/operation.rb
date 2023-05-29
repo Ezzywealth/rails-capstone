@@ -1,4 +1,4 @@
-class Entity < ApplicationRecord
+class Operation < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true
 
