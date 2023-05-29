@@ -1,0 +1,14 @@
+<section class='bg-gray-500 flex justify-between w-full'>
+  <h2 class='flex-1'>
+    Zik Budget
+  </h2>
+
+  <nav class='flex-1'>
+    <% if !user_signed_in? %>
+        <p>
+          <%= link_to 'Login', new_user_session_path, class: 'button' %>
+        </p>
+      </div>
+    <% end %>
+  </nav>
+</section>

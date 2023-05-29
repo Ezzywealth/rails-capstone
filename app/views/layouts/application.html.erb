@@ -11,8 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto p-5">
+  <body class='w-full'>
+    <%= render partial: 'shared/nav'%>
+    <main class="container mx-auto w-full p-5">
       <%= yield %>
     </main>
   </body>
