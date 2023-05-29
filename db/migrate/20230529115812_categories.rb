@@ -1,9 +1,8 @@
-class CreateEntities < ActiveRecord::Migration[7.0]
+class Categories < ActiveRecord::Migration[7.0]
   def change
-    create_table :entities do |t|
+    create_table :categories do |t|
       t.string :name
-      t.string :amount
-
+      t.string :icon
       t.integer :author, null: false, foreign_key: true
 
       t.timestamps

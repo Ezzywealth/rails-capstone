@@ -13,6 +13,8 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'devise'
 
+gem 'cancancan'
+
 # Use sqlite3 as the database for Active Record
 gem 'pg', '~> 1.5', '>= 1.5.3'
 
