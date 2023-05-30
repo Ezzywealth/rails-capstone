@@ -11,4 +11,16 @@
       </div>
     <% end %>
   </nav>
+
+  <nav>
+    <% if user_signed_in? %>
+      <p>
+        Hello <%= current_user.name %>
+      </p>
+      <% else %>
+        <p>
+          Hello Guest
+        </p>
+    <% end %>
+  </nav>
 </section>

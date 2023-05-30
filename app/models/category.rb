@@ -4,7 +4,8 @@ class Category < ApplicationRecord
   validates :icon, presence: true
 
   belongs_to :user, class_name: 'User'
-  has_many :entity_groups, dependent: :destroy
-  has_many :entities, through: :entity_groups
+  has_one_attached :icon
+  has_many :operation_category, dependent: :destroy
+  has_many :operations, through: :operation_category
 
 end

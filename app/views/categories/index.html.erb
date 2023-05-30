@@ -1,5 +1,16 @@
-<h1>THis is the categories page</h1>
+<h1>This is the categories page</h1>
 
+<% @categories.each do |category| %>
+  <div>
+    <h2>
+      <%= link_to category_operations_path(category.id, category.operations) do %>
+        <%= category.name %>
+      <% end %>
+    </h2>
+    <p><%= image_tag category.icon, class: 'category_icon' %></p>
+    <p><%= category.created_at %></p>
+  </div>
+<% end %>
 <button>
   <%= link_to 'Add New Category', new_category_path %>
 </button>

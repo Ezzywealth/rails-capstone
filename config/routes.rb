@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "welcome#index"
 
-  resources :categories, only: [:index, :show, :new] do
-    resources :operations, only: [:show, :new]
+  resources :categories do
+    resources :operations
   end
 
 end

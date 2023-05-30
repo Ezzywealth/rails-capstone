@@ -1,0 +1,21 @@
+<h2>Create a new category</h2>
+<%= form_with(model: @operation, url: category_operations_path, local: true, method: :post, multipart: true) do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :amount %><br>
+    <%= form.number_field :amount, required: true %>
+  </div>
+
+  <div class='field'>
+      <%= form.label :category %><br>
+      <%= form.collection_select :category_id, Category.all, :id, :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

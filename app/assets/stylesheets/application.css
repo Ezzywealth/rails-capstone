@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+.category_icon {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
