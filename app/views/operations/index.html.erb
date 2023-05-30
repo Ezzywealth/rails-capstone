@@ -1,10 +1,5 @@
+<%= render partial: 'shared/nav', locals: {title:'Transactions', symbol:'<', url: categories_path}%>
 <main class='operations_page'>
-  <button>
-    <%= link_to 'Back', categories_path %>
-  </button>
-  <header>
-    <h1>Transactions</h1>
-  </header>
   <section>
   <h2 class='operation_category'>
     <p>
@@ -19,10 +14,9 @@
       <% @operations.each do |operation| %>
         <div class='operation'>
           <div class='operation_left'>
-            <p><%= image_tag @category.icon, class: 'category_icon' %></p>
             <span class='operation_name'>
               <h4><%= operation.operation.name %></h4>
-              <p><%= operation.created_at %></p>
+              <p><%= operation.created_at.strftime('%d/%b/%Y') %></p>
             </span>
           </div>
             <p class='operation_amount'>$<%= operation.operation.amount %></p>
@@ -31,6 +25,6 @@
     </section>
   </section>
   <button>
-    <%= link_to 'Add New Transaction', new_category_operation_path %>
+    <%= link_to 'Add New Transaction', new_category_operation_path, class:'button' %>
   </button>
 </main>

@@ -31,8 +31,4 @@ class OperationsController < ApplicationController
   #   params.require(:operation).permit(:name, :amount)
   # end
 
-  def format_date(date)
-    date.to_fs(:rfc822)
-  end
-
 end

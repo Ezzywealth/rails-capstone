@@ -1,5 +1,5 @@
+<%= render partial: 'shared/nav', locals: {title:'Categories', symbol:'', url: ''}%>
 <main class='operations_page'>
-  <h1 class='category_title'>categories</h1>
   <section class='operations'>
     <% @categories.each do |category| %>
       <div class='operation'>
@@ -12,8 +12,8 @@
         <p>$<%= category.calculate_amount %></p>
       </div>
     <% end %>
-    <button>
-      <%= link_to 'Add New Category', new_category_path %>
-    </button>
   </section>
+    <button>
+      <%= link_to 'Add New Category', new_category_path, class: 'button' %>
+    </button>
 </main>
