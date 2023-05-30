@@ -1,16 +1,4 @@
-<section class='bg-gray-500 flex justify-between w-full'>
-  <h2 class='flex-1'>
-    Zik Budget
-  </h2>
-
-  <nav class='flex-1'>
-    <% if !user_signed_in? %>
-        <p>
-          <%= link_to 'Login', new_user_session_path, class: 'button' %>
-        </p>
-      </div>
-    <% end %>
-  </nav>
+<section class='navbar'>
 
   <nav>
     <% if user_signed_in? %>
@@ -20,6 +8,17 @@
       <% else %>
         <p>
           Hello Guest
+        </p>
+    <% end %>
+  </nav>
+  <nav>
+    <% if user_signed_in? %>
+      <p>
+        <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'button' %>
+      </p>
+    <% else %>
+        <p>
+          <%= link_to 'Sign in', new_user_session_path, class: 'button' %>
         </p>
     <% end %>
   </nav>

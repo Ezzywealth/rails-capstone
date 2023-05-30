@@ -11,9 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class='w-full'>
-    <%= render partial: 'shared/nav'%>
-    <main class=" w-full py-5">
+  <body class='w-full '>
+    <main class=" w-full py-5 main_body">
+       <%= render partial: 'shared/nav'%>
       <%= yield %>
     </main>
   </body>
