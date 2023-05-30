@@ -1,4 +1,36 @@
-<h1>This is the operations page for category <%= @category.name %></h1>
+<main class='operations_page'>
+  <button>
+  <%= link_to 'Back', categories_path %>
+</button>
+<header>
+  <h1>Transactions</h1>
+</header>
+<section>
+<h2 class='operation_category'>
+  <p>
+  <%= @category.name %>
+  </p>
+  <p class='category_amount'>
+    $<%= @operations.sum {|item| item.operation[:amount].to_i} %>
+  </p>
+</h2>
+
+  <section class='operations'>
+    <% @operations.each do |operation| %>
+      <div class='operation'>
+        <div class='operation_left'>
+          <p><%= image_tag @category.icon, class: 'category_icon' %></p>
+          <span class='operation_name'>
+            <h4><%= operation.operation.name %></h4>
+            <p><%= operation.created_at %></p>
+          </span>
+        </div>
+          <p class='operation_amount'>$<%= operation.operation.amount %></p>
+      </div>
+    <% end %>
+  </section>
+</section>
 <button>
   <%= link_to 'Add New Transaction', new_category_operation_path %>
 </button>
+</main>

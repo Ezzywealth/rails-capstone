@@ -1,8 +1,8 @@
 class OperationsController < ApplicationController
 
   def index
-    @operations = Operation.where(category_id: params[:category_id])
     @category = Category.find(params[:category_id])
+    @operations = OperationCategory.includes(:operation).where(category_id: @category.id).order(created_at: :desc)
   end
 
   def new
@@ -10,9 +10,13 @@ class OperationsController < ApplicationController
   end
 
   def create
-    @operation = Operation.new(operation_params)
+    category_id = params[:operation][:category_id]
+    name = params[:operation][:name]
+    amount = params[:operation][:amount]
+    @operation = Operation.new(name: name, amount: amount)
     @operation.user_id = current_user.id
     if @operation.save
+      OperationCategory.create(operation_id: @operation.id, category_id: category_id)
       flash[:notice] = "Operation created successfully"
       redirect_to category_operations_path
     else
@@ -23,7 +27,12 @@ class OperationsController < ApplicationController
 
   private
 
-  def operation_params
-    params.require(:operation).permit(:name, :amount, :date)
+  # def operation_params
+  #   params.require(:operation).permit(:name, :amount)
+  # end
+
+  def format_date(date)
+    date.to_fs(:rfc822)
   end
+
 end
