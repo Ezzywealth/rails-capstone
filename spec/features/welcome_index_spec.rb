@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "WelcomeIndices", type: :feature do
+RSpec.feature 'WelcomeIndices', type: :feature do
   describe 'Welcome Index' do
     it 'should have a title' do
       visit root_path

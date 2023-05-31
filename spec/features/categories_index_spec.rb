@@ -1,13 +1,12 @@
 require 'rails_helper'
 
-RSpec.feature "CategoriesIndices", type: :feature do
+RSpec.feature 'CategoriesIndices', type: :feature do
   describe 'Categories Index' do
-    let(:file) {fixture_file_upload(Rails.root.join('spec', 'support', 'assets', 'test1.webp'), 'image/webp')}
+    let(:file) { fixture_file_upload(Rails.root.join('spec', 'support', 'assets', 'test1.webp'), 'image/webp') }
     before :each do
       visit new_user_session_path
       @user = User.create(name: 'ezekiel', email: 'ezekiel@example.com', password: '1111111111')
       @user.confirm
-      @user
       @category = Category.create(name: 'Food', user_id: @user.id)
       @category.icon.attach(file)
       @categorytwo = Category.create(name: 'Football', user_id: @user.id)
@@ -19,7 +18,6 @@ RSpec.feature "CategoriesIndices", type: :feature do
       fill_in 'Email', with: @user.email
       fill_in 'Password', with: @user.password
       click_on 'Log in'
-
     end
 
     it 'should have a title' do

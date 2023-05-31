@@ -10,7 +10,6 @@ class Category < ApplicationRecord
   has_many :operations, through: :operation_category, dependent: :destroy
 
   def calculate_amount
-    self.operations.sum { |operation| operation.amount.to_i }
+    operations.sum { |operation| operation.amount.to_i }
   end
-
 end

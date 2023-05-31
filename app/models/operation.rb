@@ -1,5 +1,4 @@
 class Operation < ApplicationRecord
-
   validates :name, presence: true
   validates :amount, presence: true
 
@@ -7,5 +6,4 @@ class Operation < ApplicationRecord
 
   has_many :operation_category, dependent: :destroy
   has_many :categories, through: :operation_category, dependent: :destroy
-
 end
