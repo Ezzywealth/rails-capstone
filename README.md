@@ -26,9 +26,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Rails_Blog] <a name="about-project"></a>
+# 📖 [Zik Budget App] <a name="about-project"></a>
 
-**[Rails_Blog]** is a classic example of a blog website. It is a functional website that show the list of posts and empower readers to interact with them by adding comments and liking posts.
+**[Zik Buget App]** is a classic example of a blog website. It is a functional website that show the list of Categories and associated operations to each categories.
 
 ## 🛠 Built With <a name="built-with"></a>
 
