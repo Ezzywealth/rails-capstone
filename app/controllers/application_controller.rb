@@ -25,6 +25,4 @@ class ApplicationController < ActionController::Base
     # For example, to skip authentication for the welcome action of the welcome controller:
     params[:controller] == 'welcome' && params[:action] == 'index'
   end
-
-
 end

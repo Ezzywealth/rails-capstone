@@ -6,6 +6,7 @@ class Ability
     # guest user (not logged in)
     can :read, Welcome
     return unless user.present?
+
     can :read, :all, user_id: user.id
     #
     # The first argument to `can` is the action you are giving the user
