@@ -10,10 +10,12 @@
     <%= form.number_field :amount, required: true %>
   </div>
 
-  <div class='field'>
-      <%= form.label :category %><br>
-      <%= form.collection_select :category_id, Category.all, :id, :name, required: true %>
-  </div>
+<div class='field'>
+  <%= form.label :category %><br>
+  <%= form.collection_select :category_id, Category.all, :id, :name, { include_blank: 'Select Category', selected: @category.id }, required: true %>
+</div>
+
+
 
   <div>
     <%= form.submit class: 'create_transaction' %>

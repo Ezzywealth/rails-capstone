@@ -5,6 +5,7 @@ class OperationsController < ApplicationController
   end
 
   def new
+    @category = Category.find(params[:category_id])
     @operation = Operation.new
   end
 
@@ -16,12 +17,11 @@ class OperationsController < ApplicationController
     @operation.user_id = current_user.id
     if @operation.save
       OperationCategory.create(operation_id: @operation.id, category_id:)
-      flash[:notice] = 'Operation created successfully'
+      flash[:success] = 'Operation created successfully'
       redirect_to category_operations_path
     else
       flash[:alert] = 'Operation not created'
       render 'new'
     end
   end
-
 end

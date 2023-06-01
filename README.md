@@ -59,6 +59,9 @@
 
 ### Key Features <a name="key-features"></a>
 
+- **[Splash_Screen]**
+- **[Categories_Screen]**
+- **[Operations_Screen]**
 - **[Users_Table]**
 - **[Category_Table]**
 - **[Operation_Table]**

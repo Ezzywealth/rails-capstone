@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
     puts current_user.id
     @category.user_id = current_user.id
     if @category.save
-      flash[:notice] = 'Category created successfully'
+      flash[:success] = 'Category created successfully'
       redirect_to categories_path
     else
       puts @category.errors.full_messages
