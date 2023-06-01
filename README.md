@@ -8,14 +8,14 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    <!-- - [🚀 Live Demo](#live-demo) -->
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-    <!-- - [Run tests](#run-tests) -->
-    <!-- - [Deployment](#deployment) -->
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -67,15 +67,13 @@
 - **[Add_New_Category]**
 - **[Add_New_Transaction]**
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LIVE DEMO -->
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-> No live demo yet -->
-
-<!-- - [Live Demo Link](https://google.com) -->
+[Live Demo Link](https://operation-budget-app.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,9 +93,6 @@ In order to run this project you need:
 - Ruby On Rails
 - PostgresQL
 
-<!--
-Example command:
-
 ```sh
  gem install rails
 ```
@@ -107,7 +102,7 @@ Example command:
 Clone this repository to your desired folder:
 
 ```sh
-git clone https://github.com/Ezzywealth/rails_blog
+git clone https://github.com/Ezzywealth/rails-capstone
 
 ```
 
@@ -116,7 +111,7 @@ git clone https://github.com/Ezzywealth/rails_blog
 Install this project with:
 
 ```sh
-  cd rails_blog
+  cd rails_capstone
   bundle install
 ```
 
@@ -128,33 +123,21 @@ To run the project, execute the following command:
   rails server
 ```
 
---->
+### Run tests
 
-<!-- ### Run tests -->
-
-<!-- To run tests, run the following command: -->
-
-<!--
-Example command:
+To run tests, run the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec
 ```
---->
 
-<!-- ### Deployment -->
+### Deployment
 
-<!-- You can deploy this project using: -->
+You can deploy this project using:
 
-<!--
-Example:
+[Render](https://dashboard.render.com/)
 
-```sh
-
-```
- -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
