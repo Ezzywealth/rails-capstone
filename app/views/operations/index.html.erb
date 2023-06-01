@@ -16,10 +16,10 @@
           <div class='operation_left'>
             <span class='operation_name'>
               <h4><%= operation.operation.name %></h4>
-              <p><%= operation.created_at.strftime('%b %d, %Y') %></p>
             </span>
           </div>
             <p class='operation_amount'>$<%= operation.operation.amount %></p>
+              <p class='operation_date'><%= operation.created_at.strftime('%b %d, %Y') %></p>
         </div>
       <% end %>
     </section>

@@ -1,5 +1,7 @@
-<main class=''>
-  <h1 class="text-red-500 text-2xl">Zik Budget App</h1>
-  <button class='login'><%= link_to 'Sign In', new_user_session_path %></button>
-  <button class='signup'><%= link_to 'Sign Up', new_user_registration_path %></button>
+<main class='welcome_page'>
+  <h1 class="welcome_title">Zik Budget App</h1>
+  <div class='btn_container'>
+    <button class='welcome_login'><%= link_to 'Sign In', new_user_session_path %></button>
+    <button class='welcome_signup'><%= link_to 'Sign Up', new_user_registration_path %></button>
+  </div>
 </main>
