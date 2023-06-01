@@ -67,7 +67,7 @@
 - **[Add_New_Category]**
 - **[Add_New_Transaction]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
@@ -155,9 +155,7 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Api_endpoints]**
-
--
+- [ ] **[Responsiveness]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
