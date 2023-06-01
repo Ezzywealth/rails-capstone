@@ -6,7 +6,6 @@ RSpec.feature 'CategoriesIndices', type: :feature do
     before :each do
       visit new_user_session_path
       @user = User.create(name: 'ezekiel', email: 'ezekiel@example.com', password: '1111111111')
-      @user.confirm
       @category = Category.create(name: 'Food', user_id: @user.id)
       @category.icon.attach(file)
       @categorytwo = Category.create(name: 'Football', user_id: @user.id)

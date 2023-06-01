@@ -9,12 +9,12 @@ RSpec.feature 'WelcomeIndices', type: :feature do
 
     it 'should have a link to sign up' do
       visit root_path
-      expect(page).to have_content('Sign up')
+      expect(page).to have_content('Sign Up')
     end
 
     it 'should have a link to sign in' do
       visit root_path
-      expect(page).to have_content('Log in')
+      expect(page).to have_content('Sign In')
     end
   end
 end
