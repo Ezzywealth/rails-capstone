@@ -30,6 +30,8 @@
 
 **[Zik Buget App]** is a classic example of a blog website. It is a functional website that show the list of Categories and associated operations to each categories.
 
+**[Video Description](https://www.loom.com/share/2c221fd0bb4740f08c89f5584010d557)**
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
