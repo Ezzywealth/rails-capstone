@@ -11,8 +11,21 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class='w-full '>
+    <% if flash[:success]%>
+      <div class='flash_success'>
+        <%= flash[:success]%>
+      </div>
+    <% elsif flash[:alert] %>
+      <div class='flash_error'>
+        <%= flash[:error]%>
+      </div>
+    <% elsif flash.now[:success] %>
+      <div class='flash_success'>
+        <%= flash.now[:success] %>
+      </div>
+    <% end %>
+    <main class=" w-full py-5 main_body">
       <%= yield %>
     </main>
   </body>

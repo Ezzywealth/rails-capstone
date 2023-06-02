@@ -1,0 +1,16 @@
+<%= render partial: 'shared/nav', locals: {title:'Create a new category', symbol:'<', url: categories_path}%>
+<%= form_with(model: @category, class:'form', url: categories_path, local: true, method: :post, multipart: true) do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :icon %><br>
+    <%= form.file_field :icon, required: true %>
+  </div>
+
+  <div>
+    <%= form.submit class: 'create_transaction' %>
+  </div>
+<% end %>

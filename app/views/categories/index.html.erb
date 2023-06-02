@@ -1,0 +1,19 @@
+<%= render partial: 'shared/nav', locals: {title: 'Categories', symbol:'', url: ''}%>
+<main class='operations_page'>
+  <section class='operations'>
+    <% @categories.each do |category| %>
+      <div class='operation'>
+        <h2 class='category_left'>
+        <p><%= image_tag category.icon, class: 'category_icon' %></p>
+          <%= link_to category_operations_path(category.id) do %>
+          <h3 class='category_name'><%= category.name %></h3>
+          <% end %>
+        </h2>
+        <p>$<%= category.calculate_amount %></p>
+      </div>
+    <% end %>
+  </section>
+    <button>
+      <%= link_to 'Add New Category', new_category_path, class: 'button' %>
+    </button>
+</main>
