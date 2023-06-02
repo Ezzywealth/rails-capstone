@@ -20,9 +20,6 @@ class ApplicationController < ActionController::Base
   end
 
   def skip_authentication?
-    # Return true if the current page should be excluded from authentication
-    # You can use any condition you like to determine if authentication should be skipped
-    # For example, to skip authentication for the welcome action of the welcome controller:
     params[:controller] == 'welcome' && params[:action] == 'index'
   end
 end
